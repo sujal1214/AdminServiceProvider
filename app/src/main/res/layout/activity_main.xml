@@ -188,7 +188,9 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView">
+
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addService"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/cardgreen">
@@ -229,6 +231,7 @@
         app:layout_constraintTop_toTopOf="@+id/cardView3">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/AllServiceMenu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/cardgreen">

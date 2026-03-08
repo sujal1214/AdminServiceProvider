@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AdminServiceProvider">
         <activity
+            android:name=".AllItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".additemActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity
@@ -28,7 +34,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
