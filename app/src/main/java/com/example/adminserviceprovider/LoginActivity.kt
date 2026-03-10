@@ -19,7 +19,7 @@ class LoginActivity : AppCompatActivity() {
         this.enableEdgeToEdge()
         setContentView(binding.root)
         binding.loginButton.setOnClickListener {
-            val intent = Intent(this, SignUpActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
         binding.dontHaveAccountButton.setOnClickListener {
