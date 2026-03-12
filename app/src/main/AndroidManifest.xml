@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AdminServiceProvider">
         <activity
+            android:name=".PendingOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateUserActivity"
+            android:exported="false" />
+        <activity
             android:name=".AdminProfileActivity"
             android:exported="false" />
         <activity
