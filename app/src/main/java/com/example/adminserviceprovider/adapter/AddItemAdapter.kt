@@ -28,7 +28,7 @@ class AddItemAdapter(private val MenuServiceName:ArrayList<String>, private val 
         fun bind(position: Int) {
             binding.apply {
                 servicenameTextView.text = MenuServiceName[position]
-                priceTextView.text = MenuServicePrice[position]
+                pendingOrderQuantity.text = MenuServicePrice[position]
                 serviceImageView.setImageResource(MenuServiceImage[position])
 
                 quantityTextView.text = itemQuantities[position].toString()

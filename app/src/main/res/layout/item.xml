@@ -57,7 +57,7 @@
                 app:layout_constraintTop_toTopOf="@+id/cardView9" />
 
             <TextView
-                android:id="@+id/priceTextView"
+                android:id="@+id/pendingOrderQuantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
