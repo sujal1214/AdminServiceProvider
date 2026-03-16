@@ -20,22 +20,22 @@ class AdminProfileActivity : AppCompatActivity() {
         binding.backButton.setOnClickListener {
             finish()
         }
-        binding.name.isEnabled = false
+        binding.name1.isEnabled = false
         binding.address.isEnabled = false
         binding.email.isEnabled = false
         binding.phone.isEnabled = false
-        binding.password.isEnabled = false
+        binding.password1.isEnabled = false
 
         var isEnable = false
         binding.editButton.setOnClickListener {
             isEnable = ! isEnable
-            binding.name.isEnabled = isEnable
+            binding.name1.isEnabled = isEnable
             binding.address.isEnabled = isEnable
             binding.email.isEnabled = isEnable
             binding.phone.isEnabled = isEnable
-            binding.password.isEnabled = isEnable
+            binding.password1.isEnabled = isEnable
             if(isEnable){
-                binding.name.requestFocus()
+                binding.name1.requestFocus()
             }
         }
 

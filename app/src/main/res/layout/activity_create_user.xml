@@ -77,7 +77,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/newUserEmail"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="57dp"
         android:layout_marginStart="20dp"
@@ -98,7 +98,7 @@
         app:layout_constraintTop_toBottomOf="@+id/newUserName" />
 
     <EditText
-        android:id="@+id/newUserPassword"
+        android:id="@+id/serviceName"
         android:layout_width="match_parent"
         android:layout_height="57dp"
         android:layout_marginStart="20dp"
@@ -115,11 +115,11 @@
         android:paddingLeft="15dp"
         android:shadowColor="@color/textColor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/newUserEmail"
-        app:layout_constraintTop_toBottomOf="@+id/newUserEmail" />
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/createUserButton"
+        android:id="@+id/createUserButton1"
         android:layout_width="157dp"
         android:layout_height="57dp"
         android:layout_marginTop="32dp"
@@ -129,9 +129,9 @@
         android:text="Create New User"
         android:textColor="@color/white"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/newUserPassword"
-        app:layout_constraintStart_toStartOf="@+id/newUserPassword"
-        app:layout_constraintTop_toBottomOf="@+id/newUserPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/serviceName"
+        app:layout_constraintStart_toStartOf="@+id/serviceName"
+        app:layout_constraintTop_toBottomOf="@+id/serviceName" />
 
     <TextView
         android:id="@+id/textView8"
