@@ -27,7 +27,7 @@
             android:name=".AllItemActivity"
             android:exported="false" />
         <activity
-            android:name=".additemActivity"
+            android:name=".AddItemActivity"
             android:exported="false" />
         <activity
             android:name=".SignUpActivity"

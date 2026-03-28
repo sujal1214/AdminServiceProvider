@@ -6,7 +6,7 @@
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".additemActivity">
+    tools:context=".AddItemActivity">
 
     <ScrollView
         android:layout_width="0dp"
@@ -46,7 +46,7 @@
                 app:layout_constraintTop_toTopOf="@+id/backButton" />
 
             <EditText
-                android:id="@+id/enterServiceName"
+                android:id="@+id/ServiceName"
                 android:layout_width="0dp"
                 android:layout_height="57dp"
                 android:layout_marginStart="8dp"
@@ -65,7 +65,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
             <EditText
-                android:id="@+id/enterServicePrice"
+                android:id="@+id/ServicePrice"
                 android:layout_width="0dp"
                 android:layout_height="57dp"
                 android:layout_marginTop="24dp"
@@ -77,9 +77,9 @@
                 android:outlineSpotShadowColor="@color/textColor"
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/enterServiceName"
-                app:layout_constraintStart_toStartOf="@+id/enterServiceName"
-                app:layout_constraintTop_toBottomOf="@+id/enterServiceName" />
+                app:layout_constraintEnd_toEndOf="@+id/ServiceName"
+                app:layout_constraintStart_toStartOf="@+id/ServiceName"
+                app:layout_constraintTop_toBottomOf="@+id/ServiceName" />
 
             <TextView
                 android:id="@+id/selectImage"
@@ -94,9 +94,9 @@
                 android:paddingRight="15dp"
                 android:text="Select Image"
                 android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="@+id/enterServicePrice"
-                app:layout_constraintStart_toStartOf="@+id/enterServicePrice"
-                app:layout_constraintTop_toBottomOf="@+id/enterServicePrice" />
+                app:layout_constraintEnd_toEndOf="@+id/ServicePrice"
+                app:layout_constraintStart_toStartOf="@+id/ServicePrice"
+                app:layout_constraintTop_toBottomOf="@+id/ServicePrice" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView5"
@@ -140,7 +140,7 @@
                 android:layout_marginTop="8dp"
                 android:background="@color/white"
                 android:fontFamily="serif"
-                android:text="A web designer is a creative professional responsible for the visual appearance, layout, and usability of websites."
+                android:hint="Add Description"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@+id/textView21"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -157,7 +157,7 @@
                 android:fontFamily="serif"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
-                android:text="Short Description"
+                android:text="Facilities"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@+id/description"
                 app:layout_constraintStart_toStartOf="@+id/description"
@@ -168,9 +168,9 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:fontFamily="serif"
                 android:background="@color/white"
-                android:text="Gamer\nWeb Designer\nStudent"
+                android:fontFamily="serif"
+                android:hint="Add Facilities"
                 app:layout_constraintEnd_toEndOf="@+id/cardView5"
                 app:layout_constraintStart_toStartOf="@+id/textView22"
                 app:layout_constraintTop_toBottomOf="@+id/textView22" />

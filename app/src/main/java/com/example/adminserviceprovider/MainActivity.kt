@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         binding.addService.setOnClickListener {
-            val intent = Intent(this, additemActivity::class.java)
+            val intent = Intent(this, AddItemActivity::class.java)
             startActivity(intent)
         }
         binding.AllServiceMenu.setOnClickListener {

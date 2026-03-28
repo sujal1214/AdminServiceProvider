@@ -1,12 +1,21 @@
 package com.example.adminserviceprovider.adapter
 
+import android.content.Context
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.adminserviceprovider.databinding.ItemBinding
+import com.example.adminserviceprovider.model.AllMenu
+import com.google.firebase.database.DatabaseReference
 
-class AddItemAdapter(private val MenuServiceName:ArrayList<String>, private val MenuServicePrice:ArrayList<String>, private val MenuServiceImage:ArrayList<Int>) : RecyclerView.Adapter<AddItemAdapter.AddItemViewHolder>(){
-    private val itemQuantities = IntArray(MenuServiceName.size){1}
+class MenuItemAdapter(
+    private val context: Context,
+    private val menuList: ArrayList<AllMenu>,
+    databaseReference: DatabaseReference
+) : RecyclerView.Adapter<MenuItemAdapter.AddItemViewHolder>(){
+    private val itemQuantities = IntArray(menuList.size){1}
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -22,14 +31,19 @@ class AddItemAdapter(private val MenuServiceName:ArrayList<String>, private val 
         holder.bind(position)
     }
 
-    override fun getItemCount(): Int = MenuServiceName.size
+    override fun getItemCount(): Int = menuList.size
 
     inner class AddItemViewHolder(private val binding: ItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(position: Int) {
             binding.apply {
-                servicenameTextView.text = MenuServiceName[position]
-                pendingOrderQuantity.text = MenuServicePrice[position]
-                serviceImageView.setImageResource(MenuServiceImage[position])
+                val quantity = itemQuantities[position]
+                val menuItem = menuList[position]
+                val uriString = menuItem.serviceImage
+                val uri = Uri.parse(uriString)
+
+                servicenameTextView.text = menuItem.serviceName
+                pendingOrderQuantity.text = menuItem.servicePrice
+                Glide.with(context).load(uri).into(serviceImageView)
 
                 quantityTextView.text = itemQuantities[position].toString()
                 minusButton.setOnClickListener {
@@ -57,11 +71,11 @@ class AddItemAdapter(private val MenuServiceName:ArrayList<String>, private val 
             }
         }
         private fun deleteQuantity(position: Int) {
-            MenuServiceName.removeAt(position)
-            MenuServicePrice.removeAt(position)
-            MenuServiceImage.removeAt(position)
+            menuList.removeAt(position)
+            menuList.removeAt(position)
+            menuList.removeAt(position)
             notifyItemRemoved(position)
-            notifyItemRangeChanged(position, MenuServiceName.size)
+            notifyItemRangeChanged(position, menuList.size)
 
         }
     }

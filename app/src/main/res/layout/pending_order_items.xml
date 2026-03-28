@@ -53,7 +53,7 @@
                 android:text="Name Customer"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/textView25"
+                app:layout_constraintBottom_toTopOf="@+id/textView7"
                 app:layout_constraintStart_toEndOf="@+id/cardView9"
                 app:layout_constraintTop_toTopOf="parent" />
 
